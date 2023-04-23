@@ -1,0 +1,26 @@
+SELECT EName, Sal
+FROM Empl
+WHERE Sal >= 2200;
+SELECT EName, Sal
+FROM Empl
+WHERE Sal >= 2200;
+SELECT *
+FROM Empl
+WHERE Comm IS NULL;
+SELECT EName, Sal
+FROM Empl
+WHERE Sal NOT BETWEEN 2500 AND 4000;
+SELECT EName, Job, Sal
+FROM Empl
+WHERE Mgr IS NULL;
+SELECT EName
+FROM Empl
+WHERE SUBSTR(EName, 3, 1) = 'A';
+SELECT EName
+FROM Empl
+WHERE SUBSTR(EName, -1) = 'T';
+SELECT EName
+FROM Empl
+WHERE SUBSTR(EName, 1, 1) = 'M' AND SUBSTR(EName, 3, 1) = 'L';
+SELECT EName, Sal, NVL(Comm, 'Not given') AS Commission
+FROM Empl;
