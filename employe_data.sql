@@ -55,6 +55,7 @@ select employeName,job,salary from empTable where manager is null;
 
 -- 6.Write a query to display the name of employee whose name contains “A” as third alphabet?
 select employeName from empTable where substring(employeName, 3, 1) = 'n';
+select * from empTable where name like '%sanket%';
 
 -- 7.rite a query to display the name of employee whose name contains “T” as last alphabet?
 select employeName from empTable where right(employeName, 1) = 't'; 
@@ -66,3 +67,24 @@ select employeName from empTable where substring(employeName, 1, 3) = 'm';
 
 -- 9.Write a query to display details of employs with the text “Not given”, if  is null?
 select * from empTable where commission is null;
+select commission, case when commission is null then 'not given' else 'given' end as msg from empTable;
+
+-- ----------------------------------------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------------------------------------
+
+select * from empTable where employeName like 's%'; 
+select * from empTable where employeName like '%sa%';
+select * from empTable where employeName like 'kiran';
+select * from empTable where employeName like '';
+select place as city,location as locality from temp;
+
+
+-- --------------------------------------------------------------------------------------------
+-- for deleting the tabke
+truncate table table_name;
+
+-- removing perticular line in quary
+delete from 
